@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 #pragma once
 
 #define EE_HANDS
@@ -27,10 +27,10 @@
 #define SPLIT_WPM_ENABLE
 #define SPLIT_OLED_ENABLE
 
-#define POINTING_DEVICE_ROTATION_90
-#define SPLIT_POINTING_ENABLE
-#define POINTING_DEVICE_RIGHT
-#define POINTING_DEVICE_TASK_THROTTLE_MS 8
+// #define POINTING_DEVICE_ROTATION_90
+// #define SPLIT_POINTING_ENABLE
+// #define POINTING_DEVICE_RIGHT
+// #define POINTING_DEVICE_TASK_THROTTLE_MS 8
 
 #define OLED_TIMEOUT 120000
 #define OLED_BRIGHTNESS 120
