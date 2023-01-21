@@ -45,71 +45,71 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      * QWERTY
      * ,-----------------------------------------.                    ,-----------------------------------------.
-     * | Esc  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  BS  |
+     * |  `   |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  BS  |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  `   |
+     * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  \   |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * | Caps |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
-     * |------+------+------+------+------+------|  play |    | mute  |------+------+------+------+------+------|
-     * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |  \   |
+     * | ESC  |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+     * |------+------+------+------+------+------|  Win  |    | mute  |------+------+------+------+------+------|
+     * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            | LGUI | LAlt | LAYER| LCTR | /Enter  /       \Space \  |  [   |  ]   |  -   |  =   |
+     *            | LGUI | LAlt | LCTR | LAYER| /Space  /       \Enter \  |  [   |  ]   |  -   |  =   |
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
 
 [_QWERTY] = LAYOUT(
-  KC_ESC,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_BSPC_DEL,
-  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_GRV,
-  KC_CAPS,   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_QUOT,
-  KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_GAMING,     KC_QWERTY,KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_BSLS,
-                 KC_LGUI,KC_LALT,KC_LAYER, KC_LCTRL, KC_ENT,      KC_SPC,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL
+  KC_GRV,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_BSPC_DEL,
+  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_BSLASH,
+  KC_ESC,   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_QUOT,
+  KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_LGUI,   KC_MUTE, KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
+                KC_LBRC, KC_LALT, KC_LCTRL, KC_LAYER, KC_SPC,   KC_ENT, KC_MINS, KC_EQL, KC_PSCR, KC_RBRC
 ),
 
 /*
  * GAMING
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | Esc  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  BS  |
+ * |   `  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  `   |
+ * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  \   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Caps |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |  Up  |  '   |
+ * | Esc  |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |  Up  |  '   |
  * |------+------+------+------+------+------|  play |    | mute  |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  | Left | Down | Right|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            | LGUI | LAlt | LAYER| LCTR | /Space  /       \Enter \  |  [   |  ]   |  -   |  =   |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
- */
 
 [_GAMING] = LAYOUT(
-  KC_ESC,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_BSPC_DEL,
-  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_GRV,
-  KC_CAPS,   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_UP,  KC_QUOT,
-  KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_MPLY,     KC_MUTE,KC_N,    KC_M, KC_COMM,  KC_LEFT, KC_DOWN,  KC_RIGHT,
-                 KC_LGUI,KC_LALT,KC_LAYER, KC_LCTRL, KC_SPC,      KC_ENT,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL
+  KC_GRV,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_BSPC_DEL,
+  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_BSLASH,
+  KC_ESC,   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_UP,  KC_QUOT,
+  KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_MPLY,   KC_MUTE, KC_N,    KC_M, KC_COMM,  KC_LEFT, KC_DOWN,  KC_RIGHT,
+              KC_LBRC, KC_LALT, KC_LCTRL, KC_LAYER, KC_SPC,     KC_ENT, KC_MINS, KC_EQL, KC_PSCR, KC_RBRC
 ),
+ */
 
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | Esc  |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  | F11  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |      |  Up  |      | QK_BOOT|      |                    | PWrd | NWrd | Pscr |Scroll| Pause| F12  |
+ * | Tab  |  Home|      |  Up  |      | PUp  |                    | PWrd | NWrd | Pscr |Scroll| Pause| F12  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Caps | Left | Down | Rigth|      |      |-------.    ,-------|      |      |  Ins | Home | PUp  |      |
- * |------+------+------+------+------+------|  play |    | mute  |------+------+------+------+------+------|
+ * | Caps |  End | Left | Down | Rigth| PDown|-------.    ,-------|      |      |  Ins | Home | PUp  |      |
+ * |------+------+------+------+------+------|  play |    | RGB   |------+------+------+------+------+------|
  * | Shift|      |      |      |      |      |-------|    |-------|      | Menu |  Del |  End | PDown|      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            |MACWIN| RAlt | LAYER| RCTR | /Enter  /       \Space \  |      |      |      |      |
+ *            |MACWIN| RAlt | LAYER| RCTR | /Space  /       \Enter \  |      |      |      |      |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
 [_LOWER] = LAYOUT(
-  _______,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                       KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
-  _______, XXXXXXX,   KC_UP, XXXXXXX,   QK_BOOT, XXXXXXX,                       KC_PRVWD, KC_NXTWD, KC_PSCR,  KC_SLCK, KC_PAUS,  KC_F12,
-  _______, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, KC_INS, KC_HOME, KC_PGUP, XXXXXXX,
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       _______, XXXXXXX, KC_APP, KC_DEL, KC_END, KC_PGDN, XXXXXXX,
-                    CG_TOGG, KC_RALT, _______, KC_RCTL, _______,       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+  _______,   KC_F1,   KC_F2, KC_F3,   KC_F4,   KC_F5,                       KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
+  _______, KC_HOME, XXXXXXX, KC_UP,   QK_BOOT, KC_PGUP,                     KC_PRVWD, KC_NXTWD, KC_PSCR,  KC_SLCK, KC_PAUS,  KC_F12,
+  _______,  KC_END, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,                     XXXXXXX, XXXXXXX, KC_INS, KC_HOME, KC_PGUP, XXXXXXX,
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       RGB_TOG, XXXXXXX, KC_APP, KC_DEL, KC_END, KC_PGDN, XXXXXXX,
+                    CG_TOGG, KC_RALT, _______, KC_RCTL, _______,       _______, KC_LT, KC_GT, XXXXXXX, XXXXXXX
 ),
 
 /* RAISE
@@ -125,7 +125,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
- */
 [_RAISE] = LAYOUT(
   _______, _______ , _______ , _______ , _______ , _______,                           _______,  _______  , _______,  _______ ,  _______ ,_______,
   _______,  KC_INS,  KC_PSCR,   KC_APP,  XXXXXXX, XXXXXXX,                        KC_PGUP, KC_PRVWD,   KC_UP, KC_NXTWD,KC_DLINE, KC_BSPC,
@@ -133,6 +132,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,KC_UNDO, KC_CUT, KC_COPY, KC_PASTE, XXXXXXX,  _______,       _______,  XXXXXXX, KC_LSTRT, XXXXXXX, KC_LEND,   _______, _______,
                          _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
 ),
+ */
+
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
@@ -146,7 +147,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
- */
   [_ADJUST] = LAYOUT(
   XXXXXXX , XXXXXXX,  XXXXXXX ,  XXXXXXX , XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   QK_BOOT, XXXXXXX,KC_QWERTY,XXXXXXX,CG_TOGG,XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -154,6 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX , XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,  XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
                    _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
   )
+ */
 };
 // clang-format on
 
@@ -345,8 +346,8 @@ static void print_status_narrow(void) {
         case _QWERTY:
             oled_write("QWRTY", false);
             break;
-        case _GAMING:
-            oled_write("GAMES", false);
+        // case _GAMING:
+        //     oled_write("GAMES", false);
             break;
         default:
             oled_write("UNDEF", false);
@@ -363,18 +364,18 @@ static void print_status_narrow(void) {
         case _QWERTY:
             oled_write("Base ", false);
             break;
-        case _GAMING:
-            oled_write("Games", false);
-            break;
-        case _RAISE:
-            oled_write("Raise", false);
-            break;
+        // case _GAMING:
+        //     oled_write("Games", false);
+        //     break;
         case _LOWER:
             oled_write("Lower", false);
             break;
-        case _ADJUST:
-            oled_write("Adj  ", false);
-            break;
+        // case _RAISE:
+        //     oled_write("Raise", false);
+        //     break;
+        // case _ADJUST:
+        //     oled_write("Adj  ", false);
+        //     break;
         default:
             oled_write("Undef", false);
     }
@@ -417,11 +418,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_single_persistent_default_layer(_QWERTY);
             }
             return false;
-        case KC_GAMING:
-            if (record->event.pressed) {
-                set_single_persistent_default_layer(_GAMING);
-            }
-            return false;
+        // case KC_GAMING:
+        //     if (record->event.pressed) {
+        //         set_single_persistent_default_layer(_GAMING);
+        //     }
+        //     return false;
         case KC_LOWER:
             if (record->event.pressed) {
                 layer_on(_LOWER);
@@ -598,10 +599,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 if (shift_held) {
                     if (record->event.pressed) {
-                        if (get_highest_layer(default_layer_state) == _QWERTY) {
-                            set_single_persistent_default_layer(_GAMING);
-                        } else if (get_highest_layer(default_layer_state) == _GAMING) {
-                            set_single_persistent_default_layer(_QWERTY);
+                        // if (get_highest_layer(default_layer_state) == _QWERTY) {
+                        //     set_single_persistent_default_layer(_GAMING);
+                        // } else if (get_highest_layer(default_layer_state) == _GAMING) {
+                        //     set_single_persistent_default_layer(_QWERTY);
+                        // }
+                        if (get_highest_layer(default_layer_state) != _QWERTY) {
+                           set_single_persistent_default_layer(_QWERTY);
                         }
                     }
                 } else {
